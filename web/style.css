@@ -1,0 +1,48 @@
+:root {
+  color-scheme: light;
+  font: 16px/1.55 Inter, system-ui, sans-serif;
+  color: #142523;
+  background: #f0f4f2;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem max(1.25rem, calc((100vw - 72rem) / 2));
+  color: #fff;
+  background: #123b36;
+}
+.top a { color: #e0f6ee; }
+main { max-width: 74.5rem; margin: auto; padding: 2.5rem 1.25rem; }
+h1, h2, h3 { line-height: 1.2; margin: 0 0 .8rem; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -.055em; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1rem; }
+.intro { margin-bottom: 2rem; }
+.intro p, .muted, #target, .metadata { color: #4b615e; }
+.layout { display: grid; grid-template-columns: minmax(16rem, 1fr) minmax(0, 2fr); gap: 1rem; }
+section { padding: 1.4rem; background: #fff; border: 1px solid #d5e1db; border-radius: .9rem; }
+#history { margin-top: 1rem; }
+label { display: block; font-weight: 650; margin: 1.1rem 0 .4rem; }
+select, button { font: inherit; border: 1px solid #718984; border-radius: .45rem; padding: .55rem .75rem; }
+select { width: 100%; color: inherit; background: white; }
+button { cursor: pointer; color: inherit; background: #f2f7f4; }
+button:disabled { cursor: default; opacity: .65; }
+button.primary { color: white; background: #13554b; border-color: #13554b; }
+:focus-visible { outline: 3px solid #096ca2; outline-offset: 3px; }
+a { color: #0a5e65; }
+#notice, #target, .metadata, pre, li { overflow-wrap: anywhere; }
+#notice:empty { display: none; }
+#runs, .checks { padding: 0; margin-bottom: 0; list-style: none; }
+#runs li, .checks li { padding: .65rem 0; border-top: 1px solid #dbe5df; }
+#runs button { text-align: left; }
+.status { font-size: .875rem; font-weight: 700; margin-right: .6rem; }
+.passed { color: #205f41; }
+.failed, .error { color: #9a2e26; }
+pre { white-space: pre-wrap; background: #f2f7f4; padding: .65rem; font-size: .8rem; }
+@media (max-width: 45rem) { .layout { grid-template-columns: 1fr; } }
+
+.checks details { margin: .35rem 0; }
+.checks summary { cursor: pointer; color: #0a5e65; }

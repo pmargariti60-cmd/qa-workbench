@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Field Supply staging",
+    "url": "https://staging.example.com/checkout/",
+    "repository": "https://github.com/OWNER/REPOSITORY",
+    "revision": "main",
+    "suite": "smoke",
+    "checks": [
+      {"name": "Checkout page loads", "selector": "h1", "text": "Checkout"}
+    ]
+  }
+]

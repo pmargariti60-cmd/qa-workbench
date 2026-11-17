@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QA Workbench</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="top"><strong>QA Workbench</strong><a href="#history">Run history</a></header>
+  <main>
+    <div class="intro">
+      <h1>Environment checks</h1>
+      <p>Run a browser suite and inspect the evidence before signing off.</p>
+    </div>
+    <div class="layout">
+      <section aria-labelledby="run-heading">
+        <h2 id="run-heading">New run</h2>
+        <form id="run-form">
+          <label for="profile">Environment</label>
+          <select id="profile" required disabled></select>
+          <p id="target"></p>
+          <p id="source" hidden></p>
+          <button class="primary" id="run" disabled>Run checks</button>
+        </form>
+        <p id="notice" role="status" aria-live="polite"></p>
+      </section>
+      <section aria-labelledby="result-heading">
+        <h2 id="result-heading">Run details</h2>
+        <div id="details"><p class="muted">Select an environment and run its checks.</p></div>
+      </section>
+    </div>
+    <section id="history" aria-labelledby="history-heading">
+      <h2 id="history-heading">Run history</h2>
+      <ul id="runs"></ul>
+      <p class="muted" id="empty">No completed runs.</p>
+    </section>
+  </main>
+</body>
+</html>
